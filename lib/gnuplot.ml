@@ -153,6 +153,7 @@ module Output_type = struct
   | `Qt
   | `Png of string | `Png_cairo of string
   | `Eps of string
+  | `Canvas of string
   ]
 end
 
@@ -180,6 +181,8 @@ module Output = struct
         sprintf "set term pngcairo%s\nset output '%s'" font s
       | `Eps s ->
         sprintf "set term postscript eps enhanced%s\nset output '%s'" font s
+      | `Canvas s ->
+        sprintf "set term canvas%s\nset output '%s'" font s
     in
     { Command.
       command = output;
