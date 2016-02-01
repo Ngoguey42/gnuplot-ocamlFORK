@@ -70,7 +70,7 @@ module Output : sig
        | `Png of string  (* For saving charts to a PNG file. *)
        | `Png_cairo of string  (* Same as [`Png], but uses Cairo libs for rendering. *)
        | `Eps of string  (* For saving charts to an EPS file. *)
-	   | `Canvas of string (* For saving charts to an HTML file. *)
+	   | `Canvas of string * int * int (* For saving charts to an HTML file. *)
        ]
     -> t
 end
