@@ -43,7 +43,7 @@ module Range : sig
   type t =
   | X  of float * float
   | Y  of float * float
-  | XY of float * float * float * float
+  | XY of float * float * float * float (* x1, x2, y1, y2 *)
   | Date of Date.t * Date.t
   | Time of Time.t * Time.t
 end
